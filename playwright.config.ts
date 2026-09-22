@@ -13,7 +13,8 @@ import { dot } from 'node:test/reporters';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-testDir: 'tests',
+//testDir: 'tests',
+testDir: './tests',
   /* To Change Timeout globally for all tests */
   // timeout:40000,
   /* To apply a longer wait for all expect conditions*/
