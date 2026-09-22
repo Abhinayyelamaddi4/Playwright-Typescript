@@ -1,0 +1,21 @@
+{
+  "name": "playwright_aut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^25.9.8",
+    "allure-playwright": "^3.10.2"
+  },
+  "dependencies": {
+    "csv-parse": "^7.0.2",
+    "playwright-stealth": "^0.0.1",
+    "xlsx": "^0.18.5"
+  }
+}
