@@ -34,6 +34,7 @@ test('Check Top Recommendations',{tag:['@sanity','@regression']},async({page})=>
     await expect(page.locator('#tbodyid')).toBeVisible();
 });
 
+
 /*
 import{test ,expect} from'@playwright/test';
 
@@ -63,7 +64,7 @@ await expect.soft(page.getByRole('link',{name:'Log out'})).toBeVisible();
 await expect.soft(page.locator("#nameofuser")).toContainText('Welcome poojabandari');
 });
 
-/*
+
 test.describe('group2',async()=>{  
 
 test.fixme('test4',async({page})=>{ //-----------------------------------------4
@@ -103,12 +104,7 @@ await expect(page.locator("#nameofuser")).toContainText('Welcome poojabandari');
 });
 })
 
-*/
 
-
-
-
-/*
 
 test('@sanity test1',async({page})=>{
 await page.goto("https://demowebshop.tricentis.com/");
@@ -149,12 +145,6 @@ expect(text).toContain('Welcome to our store');
 
 })
 })
-*/
-
-
- 
-
-/*
 
  await page.goto('https://www.demoblaze.com/index.html');
     await page.getByRole('link', { name:'Log in' }).click();
@@ -183,6 +173,5 @@ expect(text).toContain('Welcome to our store');
     })   
     })
 
-    */
 
 */
