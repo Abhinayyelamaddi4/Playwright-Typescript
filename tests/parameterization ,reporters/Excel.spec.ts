@@ -6,7 +6,7 @@ import XLSX from 'xlsx';
 // const filecontent=fs.readFileSync(csvPath,'utf-8'); 
 
 
-const XLSXpath='testdata/logindata.xlsx'; //---> reading excel through location 
+const XLSXpath='testdata/login_data.xlsx'; //---> reading excel through location 
 const workbook=XLSX.readFile(XLSXpath);  //----> read from workbook imported xlsx  
 const sheetnames=workbook.SheetNames[0]; //----> excell sheets in workbook sheetnames=sheetnames
 const worksheet=workbook.Sheets[sheetnames]; //--->workbook .sheetnames --> worksheet =sheet calling the sheet from sheets

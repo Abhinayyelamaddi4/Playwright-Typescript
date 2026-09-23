@@ -6,7 +6,7 @@ import{test ,expect} from'@playwright/test';
 // view record in show report for screenshot --->parameter and video --->parameter
 
 
-test.only('screenshots from config',async ({page})=>{
+test('screenshots from config',async ({page})=>{
     await page.goto('https://www.demoblaze.com/index.html');
     await page.getByRole('link', { name:'Log in' }).click();
     await page.locator('#loginusername').fill('poojabandari');

@@ -2,13 +2,13 @@ import { test, expect ,Page } from '@playwright/test';
 
 //only ,skip , fail ,fixme ,slow --> all the test methods are executed in single page 
 
-
+/*
 //  test.only --->only test gets executed as per the requirement -----------------
     test.only('test1',async({page})=>{     
     await page.goto('https://www.google.com/');
     await expect(page).toHaveTitle('Google');
 });
-
+*/
 
 // test.skip -->only test gets skipped as per the requirement --------------------
 test.skip('test2',async({page})=>{       
