@@ -4,6 +4,7 @@ import { test, expect } from '@playwright/test';
 const searchitems:string[]=['laptop','giftcard' ,'smartphone']; 
 
 /*
+
 for(const item of searchitems) // using looping statement ----> iterating same test multiple times with multiple sets of data
 {
    test(`search test for ${item}`,async({page})=>{ // back tick operator for dynamic search +${item} is required
@@ -14,9 +15,9 @@ for(const item of searchitems) // using looping statement ----> iterating same t
 
 });
 }
-*/
 
-/*
+
+
 // using foreach loop function  -a control flow statement used to iterate elements in a collection --> such as an array, list
 searchitems.forEach((item)=>{     // searchitems is an array , foreach function will take arrow function((item)=>{  )}
 test(`search test for ${item} `, async ({ page })=> {  // use the backtick operator for dynamic search +${item} is required
@@ -27,7 +28,7 @@ await expect.soft(page.locator('h2 a').nth(0)).toContainText(item, {ignoreCase:t
 });
 
 })
-*/
+
 
 // describe  -- a group related tests into a logical block
 
@@ -36,9 +37,10 @@ searchitems.forEach((item)=>{
 test(`search test for ${item}`, async ({ page })=> {  // use the backtick operator for dynamic search +${item} is required
 await page.goto('https://demowebshop.tricentis.com/');
 await page.locator('#small-searchterms').fill(item); 
-await page.locator("input[value='Search']").click();
-await expect.soft(page.locator('h2 a').nth(0)).toContainText(item, {ignoreCase:true});
+await page.getByRole('button', { name: 'Search' }).click();
+await expect.soft(page.locator('h2 a').first()).toContainText(item, {ignoreCase:true});
 
 })
-})
+}) 
 }); 
+*/

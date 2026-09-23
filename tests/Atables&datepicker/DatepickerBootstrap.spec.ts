@@ -2,7 +2,8 @@ import{test ,expect,Locator} from "@playwright/test"
 
 test('Bootstrap data picker',async({page})=>{
 await page.goto('https://www.booking.com/'); // go to this page and find below element
-await page.getByTestId("button[data-testid='searchbox-dates-container']").click();  //--click on date picker field to open calendar
+//await page.getByTestId("button[data-testid='searchbox-dates-container']").click();  //--click on date picker field to open calendar
+await page.locator("[data-testid='searchbox-dates-container']").click(); //CSS
 
 // let used for global variable defines the value (dates are unselected once they passed) check-in /check-out 
 let checkinYear:string="2026";
@@ -21,7 +22,7 @@ if(currentMonth==checkinMonth && currentYear==checkinYear) // && and operators u
     break;
 }
 else{
-   page.locator("button[aria-label='Next month']").click();  // click next 
+  await page.locator("button[aria-label='Next month']").click();  // click next 
 }
 }
 
@@ -47,7 +48,7 @@ expect(checkInDatesSelected).toBeTruthy(); // global varibale should be addresse
 // checkout date selection--------------------------------------------------
 
 let checkOutYear:string="2026";
-let checkOutMonth:string="septemeber";
+let checkOutMonth:string="September";
 let checkOutDate:string="04";
 
 
@@ -61,7 +62,7 @@ while(true)
     break
    }
 else{
-    page.locator("button[aria-label='Next month']").click(); 
+  await page.locator("button[aria-label='Next month']").click(); 
 }
 }
 

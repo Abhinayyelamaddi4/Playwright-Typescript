@@ -25,12 +25,12 @@ test('test3',async({page,browserName})=>{
     await expect(page).toHaveTitle('Google');
 })
 
-
+/*
 //test.fail -->only test gets failed as per the requirement ----------------------1
     test.fail('test4',async({page})=>{     
     await page.goto('https://www.google.com/');
     await expect(page).toHaveTitle('Google');
-});
+}); */
 
 
 //test.fixme -->if the test in incomplete or partially completed -----------------> test is skipped

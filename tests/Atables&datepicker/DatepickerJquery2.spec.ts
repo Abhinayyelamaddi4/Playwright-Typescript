@@ -50,7 +50,7 @@ const date:string='21';
 
 selectDate(year,month,date,page,true); // true =future date , false =pastdate
 const expectDate='08/21/2027';
-await expect(datainput).toHaveValue(expectDate); // check the inputvalue in expectdate
+await expect(datainput).toHaveValue('08/21/2027'); // check the inputvalue in expectdate
 
 await page.waitForTimeout(5000);
 

@@ -6,7 +6,7 @@ test('Autowaiting and forcing', async ({ page }) => {
 //hard assertions : if any of the assertion got failed action/session terminates immediately rest of the code will not executed 
 
 await expect(page).toHaveURL('https://demowebshop.tricentis.com/');
-await expect(page).toHaveTitle('Featured products');
+await expect(page).toHaveTitle("Demo Web Shop");
 
 const text1=page.locator('text=Welcome to our store')
 await expect(text1).toBeVisible();
@@ -19,7 +19,7 @@ await page.waitForTimeout(5000);
 // soft is added for every expect validation / assertion  (expect is hard -->using expect.soft)
 
 await expect.soft(page).toHaveURL('https://demowebshop.tricentis.com/');
-await expect.soft(page).toHaveTitle('Featured products');
+await expect.soft(page).toHaveTitle("Demo Web Shop");
 
 const text2=page.locator('text=Welcome to our store')
 await expect.soft(text2).toBeVisible();

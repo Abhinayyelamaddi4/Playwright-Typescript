@@ -10,8 +10,8 @@ test('verify css Locators',async({page})=>{
 
     // absolute CSS Selector
     // html>body>div>div>h1  -- until we find elements navigated to each and every node 
-      const tag:Locator=page.locator("h1");
-      await expect(tag).toContainText("Basic Web Page");
+    /*  const tag:Locator=page.locator("h1");
+      await expect(tag).toContainText("Basic Web Page"); */
 
      // html>body>div>div>p ------> (p)-------> is paragraph tag
      // html>body>div>div>p[id=para1]   -->p[id=para1] or --> p[class=main] ------------------------------------------

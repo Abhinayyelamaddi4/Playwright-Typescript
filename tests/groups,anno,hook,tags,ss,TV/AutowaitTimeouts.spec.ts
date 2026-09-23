@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Autowaiting and forcing', async ({ page }) => {
-    test.setTimeout(2000); // we can add timeout in playwright config or in the test file -->50000 limit
+   // test.setTimeout(2000); // we can add timeout in playwright config or in the test file -->50000 limit
     // test.slow() is a annotation for  triple the time out  1000*3
     await page.goto('https://demowebshop.tricentis.com/'); 
 

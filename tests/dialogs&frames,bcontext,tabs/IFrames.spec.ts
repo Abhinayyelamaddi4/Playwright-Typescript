@@ -30,11 +30,11 @@ await page.waitForTimeout(5000);
 // page.framelocator (we can pass all type of locators)
 // page.frameLocator:-->it allows all type of locators to locate element ---> CSS , Xpath ,inbuilt Locators
 
-
+/*
 const inputbox=page.frameLocator("[src='frame_1.html']").locator("[name='mytext']"); // framelocator --> frame+locator
-await inputbox.fill("john");
+await inputbox.fill("head");
 await page.waitForTimeout(5000);
-
+*/
 //-------------------------------------approch-3-----------> nested frame <------------------------------------------
 const frame3=page.frame({url:"https://ui.vision/demo/webtest/frames/frame_3"});
 if(frame3)

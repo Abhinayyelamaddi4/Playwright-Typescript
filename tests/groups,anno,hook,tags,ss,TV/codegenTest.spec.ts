@@ -16,12 +16,23 @@ test('test', async ({ page }) => {
 codegen : is a code generator , we can  inspect elements with manual clicks & assertions on webpage
 npx playwright codegen ---> execute the command automatically opens playwright inspector parallely with a browser 
 npx playwright codegen ---> manually copy the script and paste in new file 
+
+by using debug we can record the test and select the locator to locate element & select languages in test runner 
+npx playwright test codegenTest.spec.ts --debug ---> specific file (manually generated)
+
 npx playwright codegen -o tests/codegenTest.spec.ts  -------> executes the test script into file  or
 npx playwright codegen -output tests/codegenTest.spec.ts ---> executes the test script into file
+npx playwright codegen https://www.google.com/   ---> launch the browser directly 
+
 npx playwright codegen -o tests/codegenTest.spec.ts --device "iphone 6" 
+npx playwright codegen https://www.google.com/ --device "iphone 6" 
+
 npx playwright codegen -o tests/codegenTest.spec.ts --viewport-size "1280,720"
-npx playwright test codegenTest.spec.ts --debug
-select testrunner in codegen -->json /java /junit & few other 
+npx playwright codegen https://www.google.com/ --viewport-size "800,600" -----> width & height 
 ------->viewport: {width:1280 , height:720} ----------> global config 
+
+select testrunner in codegen -->json /java /junit & few other 
 using playwright inspector inspect the elements with clicks & checks the assertions in browser --> visibility , text,value,snapshot
+
+ 
 */
