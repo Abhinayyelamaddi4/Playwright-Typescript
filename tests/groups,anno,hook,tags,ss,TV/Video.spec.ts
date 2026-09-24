@@ -3,7 +3,7 @@ import{test ,expect} from'@playwright/test';
 // using playwright configuration :
 // (video://'on'//, //'off'//, //'on-all-retries'//, //'only-on-failure'//
 // //'retain-on-failure'// , //'retain-on-first-retry// , //'retain-with-video// , //'retain-on-failure-and-retries'//
-// view record in show report for screenshot --->parameter and video --->parameter
+// view record in show report & folder location
 
 
 test('screenshots from config',async ({page})=>{

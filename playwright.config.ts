@@ -36,7 +36,7 @@ testDir: 'tests',
   // grepInvert : /(@sanity)/,
 use: {
 
-  // screenshot:'on',
+  screenshot:'on',
   // video:'on',
   /* Base URL to use in actions like `await page.goto('')`. */
     

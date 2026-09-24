@@ -22,15 +22,15 @@ else{
 }
 
 }
-       const alldates=await page.locator(".ui-datepicker-calendar td").all(); // all dates in a calendar
-       for(let dt of alldates) // dt of alldates select a date(dt) in calendar 
-      {
-       const dateText=await dt.innerText();   // selected date is having some innertext
-       if(dateText==targetDate)
-        {
-            await dt.click()
-        } 
-      }
+const alldates=await page.locator(".ui-datepicker-calendar td").all(); // all dates in a calendar
+for(let dt of alldates) // dt of alldates select a date(dt) in calendar 
+ {
+ const dateText=await dt.innerText();   // selected date is having some innertext
+   if(dateText==targetDate)
+    {
+      await dt.click()
+    } 
+ }
 
 }
 

@@ -14,6 +14,7 @@ const dropdownOptions:Locator=page.locator("#country>option");
 await expect(dropdownOptions).toHaveCount(10); // staticdropdown(stable)  count is visible
 console.log(await dropdownOptions.allTextContents());
 
+/*
 // printed all the options in the form of array --> use this method 
 const optionstext:string[]=(await dropdownOptions.allTextContents()).map(text=>text.trim()); // dropdown options with trim
 console.log(optionstext)
@@ -24,5 +25,18 @@ for(const option of optionstext)
 {
     console.log(option)
 }
+    */
+
 await page.waitForTimeout(3000);
 })
+
+
+
+/*
+
+await page.selectOption("'#country",{value:'uk'}); // using value attribute
+await page.selectOption("'#country",{label:'India'}); // using label --> country
+await page.selectOption("'#country",{index:3}); // using index 0,1,2,3 
+await page.waitForTimeOut(3000);
+
+*/

@@ -2,8 +2,8 @@ import{test ,expect} from'@playwright/test';
 
 
 test('Screenshots on page of browser',async({page})=>{
-    await page.goto("https://demowebshop.tricentis.com/")
-    const Timestamp=Date.now();
+ await page.goto("https://demowebshop.tricentis.com/")
+ const Timestamp=Date.now();
 // page screenshot
   await page.screenshot({path:'Screenshots/'+'homepage'+'timestamp'+'.png'});     // add like tags
 // fullpage screenshot                
@@ -20,6 +20,7 @@ test('Screenshots on page of browser',async({page})=>{
 
  await page.locator('.product-grid.home-page-product-grid').screenshot({path:'screenshots/'+'featuredproducts'+'timestamp'+'.png'});
 
+
 })
 
 // view record in show report for screenshot --->parameter and video --->parameter
@@ -28,6 +29,16 @@ test('Screenshots on page of browser',async({page})=>{
 
 const products= page.locator(".page.category-page");
 await products.screenshot({path:'Screenshot/'+'products'+'Timestamp'+'.png'});
+await page.locator(".page.category-page").screenshot({path:'Screenshot/'+'products'+'Timestamp'+'.png'});
+
+await page.goto("https://www.amazon.com/");
+await page.screenshot({path:'amazon2.png'});
+await page.screenshot({path:'Screenshot/amazon2.png'});
+await page.screenshot({path:'Screenshot/amazon2.png' , fullpage:true});
+await page.screenshot({path:`Screenshot/amazon2.png, ${date.now()}.png`); 
+
+const ele= await page.$("#twotabsearchtextbox");
+await ele?.screenshot({path:'Screenshot/amazon2.png'});
 
 */
 

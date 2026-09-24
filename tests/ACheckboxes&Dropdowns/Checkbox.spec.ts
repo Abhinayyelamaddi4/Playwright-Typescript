@@ -48,3 +48,10 @@ expect(inputvalue).toBe("abhinayelamaddi@gmail.com");
 await page.waitForTimeout(3000);
 */
 })
+
+
+/*
+// await page.waitForSelector("....") ---> success message  or selective filter messages or search collections on relative item 
+// await page.locator("[role='menuitem'],{hasText:'support'}") ---> elements having same attribute are defined with {hasText:''} method
+
+*/

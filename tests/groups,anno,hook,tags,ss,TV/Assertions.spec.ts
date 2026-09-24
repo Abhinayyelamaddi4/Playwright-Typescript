@@ -4,7 +4,7 @@ test('verify the assertion',async({page})=>{
 
     await page.goto("https://demowebshop.tricentis.com/")
      
-    // assertions : to verify the element based on thier attributes /perform  action on  webpage 
+    // assertions : to locate element based on thier attribute /to do some action on webpage  
     // assertions are in the form of expect functions --> there are 2 types : auto-retrying assertions & non-retrying assertions 
     // auto retrying assertions : it works based on locator & pages ---->Asynchronus nature  --> timeout is possible
     // non retrying assertions  : it works based on the value  -->synchronus -->no need to put await --> timeout is not possible
@@ -35,3 +35,22 @@ test('verify the assertion',async({page})=>{
 
 
 })
+/*
+
+toHaveText()  : full match of element ------------------------->
+const userNames = page.locator("#login_credentials h4");
+await expect(userNames).toHaveText("Accepted usernames are:");
+
+toContainText(): partial match of element  ------------------->
+const someText = page.locator(".login_password h4"); // h4 is child tag 
+await expect(someText).toContainText("all");
+
+toHaveAttribute ('','') ------------------------------------->
+const attributeValue = page.locator("#user-name");
+await expect(attributeValue).toHaveAttribute('placeholder', 'Username'); // use key and value of attribute 
+await expect(page.locator("#user-name")).toHaveAttribute('placeholder', 'Username'); //pass tow values attribute name & value of attribute
+
+const attributeValue = page.locator("#user-name");
+await expect(attributeValue).toHaveClass("form_input"); // use class attribute 
+
+*/

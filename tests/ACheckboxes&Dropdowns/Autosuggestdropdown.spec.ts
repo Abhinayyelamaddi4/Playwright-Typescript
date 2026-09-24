@@ -51,7 +51,6 @@ await page.waitForTimeout(5000);
  /* static method style)
 
  console.log(await optionText.allTextContents()); 
-
  const texts: string[] = (await optionText.allTextContents()).map((item:string)=>(item.trim()));
  console.log(texts);
  */

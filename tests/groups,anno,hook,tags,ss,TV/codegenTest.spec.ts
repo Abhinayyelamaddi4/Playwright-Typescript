@@ -34,5 +34,15 @@ npx playwright codegen https://www.google.com/ --viewport-size "800,600" -----> 
 select testrunner in codegen -->json /java /junit & few other 
 using playwright inspector inspect the elements with clicks & checks the assertions in browser --> visibility , text,value,snapshot
 
+
+--------------------------------------------> test plugin <--------------------------------------------------
+
+using test plugin we can perform some actions 
+actions are : we can select folders / files to run , debug & continuous run the test 
+-----> select specific browser/browsers to run the test
+-----> select record --> playwright will automatically launch Codegen & manually inspect elements accordingly 
+<-----------------------------------> script is generated in specific file (test-1.spec.ts) --> created by playwright 
+-----> select pick locator ---> automatically it will take you to browser --> select website and locate element manually
+<-----------------------------------> element is located in command line --> use generated locator in test
  
 */

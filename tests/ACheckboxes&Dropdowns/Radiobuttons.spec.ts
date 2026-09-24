@@ -17,6 +17,7 @@ await male.check();
 await expect(male).toBeChecked();   
 await page.waitForTimeout(3000); 
 
+await expect(page.locator("#female")).not.toBeChecked();
 
 
 /*
@@ -27,7 +28,12 @@ await expect(femaleRadio).toBeEnabled();
 expect(await femaleRadio.isChecked()).toBe(false);
 await femaleRadio.check()
 await expect(femaleRadio).toBeChecked();
-// expect(await femaleRadio.isChecked()).toBe(true);
+expect(await femaleRadio.isChecked()).toBe(true);
+
+or
+
+await page.locator("#female").check();
+await expect(page.locator("#female")).toBeChecked();
 */
 
 await page.waitForTimeout(3000);
