@@ -1,7 +1,7 @@
 import{test ,expect,Locator,Page} from "@playwright/test"; // auto suggest dropdown or bootstrap
 
-// add no of variables in the function for multiple datepickers --> async function selectdate()
-async function selectDate(targetYear:string, targetMonth:string ,targetDate:string ,page:Page,isFuture:boolean) // parameters in func
+//  using async function --> selectdate(page:Page){  -->add outside of describe block to validate parameteres for multiple functions
+async function selectDate(targetYear:string, targetMonth:string ,targetDate:string ,page:Page,isFuture:boolean) //parameters in func
 {
     while(true)
 {

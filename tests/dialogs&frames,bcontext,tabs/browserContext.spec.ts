@@ -9,7 +9,7 @@ test('Browser context demo',async({})=>{  // fixture added in test function -->s
     // it picks default browsers added in config / create & launch new --> browser , context , pages --->3 types of fixtures
     
      
-    const browser = await chromium.launch();
+    const browser = await chromium.launch();  //const browser = await chromium.launch({headless:false});
     const context = await browser.newContext();
     const page1   = await context.newPage();
     const page2   = await context.newPage();

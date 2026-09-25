@@ -31,12 +31,12 @@ testDir: 'tests',
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
      reporter:'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
-
+  
   // grep: /(?=.*@sanity)|(?=.*@regression)/, 
   // grepInvert : /(@sanity)/,
 use: {
 
-  screenshot:'on',
+  // screenshot:'on',
   // video:'on',
   /* Base URL to use in actions like `await page.goto('')`. */
     

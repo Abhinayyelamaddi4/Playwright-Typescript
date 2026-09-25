@@ -30,12 +30,12 @@ await page.close();
 // before each test ------------------------------------------------>condition get executed 
     test.beforeEach('login app',async()=>{  
     await page.locator('#login2' ).click();
-    await page.locator('#loginusername').fill('poojabandari');
+    await page.locator('#loginusername').fill('poojabandari'); 
     await page.locator('#loginpassword').fill('bandari');
     await page.locator("button[onclick='logIn()']").click(); //await page.getByRole('button',{name:'Log In'}).click();
     await page.waitForTimeout(2000)
 })
-
+  // await page.waitForSelector(".title");  ---> loaded page is visible to locate
  // after each test  ------------------------------------------------>condition get executed 
 test.afterEach('logout app',async()=>{ 
 await page.locator('#logout2').click();
@@ -65,4 +65,7 @@ test.describe('mygroup',async()=>{
 });
 })
 
-
+/*
+await page.fill('',''); // search box & pass item
+await page.keyboard.press('Enter');
+*/
