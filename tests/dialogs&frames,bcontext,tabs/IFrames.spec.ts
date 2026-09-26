@@ -40,7 +40,7 @@ const frame3=page.frame({url:"https://ui.vision/demo/webtest/frames/frame_3"});
 if(frame3)
 {
       // await frame3.fill("[name='mytext']","hello"); 
-         await frame3.locator("[name='mytext3']").fill('welcome'); // frame3.locator --> capture element and fill 
+        await frame3.locator("[name='mytext3']").fill('welcome'); // frame3.locator --> capture element and fill 
 
         const childFrames=frame3.childFrames(); // to return array of childframes into frames3
         console.log("child frames inside the frame3 :", childFrames.length);

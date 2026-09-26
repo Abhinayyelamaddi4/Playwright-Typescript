@@ -3,7 +3,8 @@ import{test ,expect,Locator} from "@playwright/test"; // auto suggest dropdown o
 
 test('comparing methods  ',async({page})=>{
 await page.goto("https://demowebshop.tricentis.com/");
-// Group of elements are captured & represented by a locator -->locator isan interface with constant variable & class(.) represent products --->1
+// Group of elements are captured & represented by a locator 
+// locator is an interface with constant variable & class(.) represent products --->1
 const products:Locator=page.locator(".product-title"); 
 
 console.log(await products.nth(1).innerText());   // capture actual text /input value of the element 

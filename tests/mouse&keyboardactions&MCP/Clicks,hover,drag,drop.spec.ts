@@ -5,7 +5,8 @@ await page.goto("https://play1.automationcamp.ir/mouse_events.html");
 
 /* // Click action
 await expect(page.locator("#click_type")).not.toBeVisible();
-await page.locator("div#click_area").click();   //-------------> await page.click("div#click_area");
+await page.locator("div#click_area").click(); 
+// await page.click("div#click_area");
 await expect(page.locator("#click_type")).toHaveText("Click");
 
 

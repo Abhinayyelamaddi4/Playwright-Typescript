@@ -14,7 +14,7 @@ const worksheet=workbook.Sheets[sheetnames]; //--->workbook .sheetnames --> work
 // covert sheet into JSON ----- imp objective
 // xlsx file i
 const logindata:any=XLSX.utils.sheet_to_json(worksheet); //--> sheettojson(worksheet)
-console.log(logindata); // printing the records in sheet to select the data in below method
+console.log(logindata); // printing the records in sheet  to select the data in below method
                         
 test.describe('login test data',async()=>{
 

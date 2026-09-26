@@ -28,8 +28,8 @@ test('verify the assertion',async({page})=>{
    expect(welcometext).toContain('Welcome'); // toContain --> non retry assertion
 
    // 3. Negating matcher
-   await expect(page.locator('text=Welcome to our store')).toBeVisible(); // auto-retry
-   expect(welcometext).toContain('Welcome'); // no auto-retry
+   await expect(page.locator('text=Welcome to our store')).toBeVisible(); // auto-retry use not.toBeVisible
+   expect(welcometext).toContain('Welcome'); // no auto-retry use not.toContain
 
    await page.waitForTimeout(5000);
 

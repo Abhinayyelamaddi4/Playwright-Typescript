@@ -2,7 +2,7 @@ import{test ,expect,Page,chromium } from '@playwright/test' // import according 
 
 // browser creates 'context' --> by using context we can create  multiple pages, tabs, windows ,app's  on same browser
 // browsercontext can work on multiple applications parallelly
-// in playwirght tabs , windows , popups ---> comes under page
+// in playwirght tabs , windows , popups ---> comes under contexts of page
 
 
 test('Browser context demo',async({})=>{  // fixture added in test function -->should be restricted in condition

@@ -45,7 +45,7 @@ for(const text of secondrowtexts)
 const allrowdata:any=await rows.all(); 
 for(let row of allrowdata.slice(1) ) // using slice to remove headers in the table
 {
-const col=await row.locator('td').allInnerTexts(); 
+const col=await row.locator('td').allInnerTexts(); // for array --> allInnerTexts()
 console.log(col);  
 // console.log(col.join('\t')); //---->a tab space to remove [] print in table format 
 }

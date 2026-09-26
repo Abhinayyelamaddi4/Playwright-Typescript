@@ -9,7 +9,7 @@ await page.goto("https://demowebshop.tricentis.com/");
 await page.locator("#small-searchterms").focus();
 await page.keyboard.type("Laptop"); // type the item 
 await page.keyboard.press("Control+A"); // press to select text
-//await page.keyboard.press("Enter"); // press enter to locate element
+//-----------------------------------------await page.keyboard.press("Enter"); // press enter to locate element
 await page.keyboard.press("Backspace"); // press backspace to delete 
 await page.waitForTimeout(3000); 
 

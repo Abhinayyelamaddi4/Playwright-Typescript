@@ -41,11 +41,13 @@ await page.goto("https://datatables.net/examples/core/basic_init/zero_configurat
 const dropdown=page.locator("#dt-length-0"); // select label in dropdown (10,25,50,100 pages)
 await dropdown.selectOption({label:'25'})
 
+// const row2=page.locator("#example tbody tr");
+// await expect(row2).toHaveCount(25); 
+
 const rows=await page.locator("#example tbody tr").all(); 
 expect(rows.length).toBe('25'); 
 
-// const row2=page.locator("#example tbody tr");
-// await expect(row2).toHaveCount(25);    
+   
 });
 */
 /*

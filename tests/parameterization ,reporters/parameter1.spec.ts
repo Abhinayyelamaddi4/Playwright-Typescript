@@ -11,7 +11,7 @@ for(const item of searchitems) // using looping statement ----> iterating same t
    await page.goto("https://demowebshop.tricentis.com/");
    await page.locator('#small-searchterms').fill(item);
    await page.locator("input[value='search']").click();
-   await expect.soft(page.locator('h2 a').nth(0)).toContainText(item,{ignoreCase:true}); //  tocontaintext is soft expect condition 
+   await expect.soft(page.locator('h2 a').nth(0)).toContainText(item,{ignoreCase:true});
 
 });
 }
